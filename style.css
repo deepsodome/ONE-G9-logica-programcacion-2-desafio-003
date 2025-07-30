@@ -1,0 +1,58 @@
+/* Contenedor del video */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Video YouTube en fullscreen */
+.video-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Evita clics en el video */
+}
+
+/* Patrón o filtro sobre el video */
+#video_pattern {
+  background: #000;
+  opacity: 0.2; /* Ajusta para dar contraste al texto */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Contenido encima */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Tamaño del cuadro */
+  width: 90%;
+  max-width: 800px;
+  padding: 200px;
+
+  /* Fondo negro con transparencia (editable en VS Code) */
+  background: #1e012bcc;
+
+  /* Estilo extra */
+  border-radius: 15px;                   
+  box-shadow: 0 4px 30px #dddca299; /* sombra con transparencia */
+  
+   /* Texto */
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 18px;
+}
