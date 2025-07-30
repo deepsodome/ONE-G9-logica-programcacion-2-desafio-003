@@ -9,14 +9,15 @@
   z-index: -1;
 }
 
-/* Video YouTube en fullscreen */
-.video-container iframe {
+/* Video en fullscreen */
+.video-container video {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120%;
-  height: 120%;
+  min-width: 100%;
+  min-height: 100%;
   transform: translate(-50%, -50%);
+  object-fit: cover;
   pointer-events: none; /* Evita clics en el video */
 }
 
@@ -44,15 +45,15 @@
   max-width: 800px;
   padding: 200px;
 
-  /* Fondo negro con transparencia (editable en VS Code) */
-  background: #1e012bcc;
+  /* Fondo negro con transparencia */
+  background: #000000cc;
 
   /* Estilo extra */
   border-radius: 15px;                   
-  box-shadow: 0 4px 30px #dddca299; /* sombra con transparencia */
+  box-shadow: 0 4px 30px #e6590899;
   
    /* Texto */
-  color: rgb(255, 255, 255);
+  color: rgb(207, 207, 206);
   text-align: center;
   font-size: 18px;
 }
